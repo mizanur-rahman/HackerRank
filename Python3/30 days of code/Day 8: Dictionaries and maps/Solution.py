@@ -7,9 +7,12 @@ for i in range(n):
     d=input().split()
     phonebook[d[0]]= d[1]
 
-for j in range(n):
-    name=str(input())
-    if name in phonebook:
-        print(str(name)+ "=" +str(phonebook[name]))
-    else:
-        print("Not found")
+while True:
+    try:   
+        for j in range(n):
+            name=str(input())
+            if name in phonebook:
+                print(str(name)+ "=" +str(phonebook[name]))
+            else:
+                print("Not found")
+    except: break
